@@ -3,13 +3,12 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>geoPortal</title>
-        <link type="text/css" href="css/styles.css" rel="stylesheet" />
-        <!-- <script type="text/javascript" src="https://getfirebug.com/firebug-lite.js"></script> -->
-        <!-- <script type="text/javascript" src="http://www.openlayers.org/api/OpenLayers.js"></script> -->
-        <script type="text/javascript" src="js/OpenLayers.js"></script>
-        <script type="text/javascript" charset="UTF-8" src="js/geoportal_params.js"></script>
-        <script type="text/javascript" charset="UTF-8" src="js/geoportal_functions.js"></script>
+        <title>geoportal</title>
+        <link type="text/css" href="media/css/styles.css" rel="stylesheet" />
+        <script type="text/javascript" charset="UTF-8" src="media/js/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="media/js/OpenLayers.js"></script>
+        <script type="text/javascript" charset="UTF-8" src="media/js/geoportal_params.js"></script>
+        <script type="text/javascript" charset="UTF-8" src="media/js/geoportal_functions.js"></script>
     </head>
     <body onload="gp.init()"  onresize="gp.SetMapSize();">
         <div id="head" class="head">
@@ -19,42 +18,42 @@
         <div id="tools" class="toolbar">
             <button onclick="gp.GoHome()" onmouseover="gp.TipOn('Go Home','tool');"
                     onmouseout="gp.TipOff()" class="tool">
-                <img src="img/mActionQgisHomePage.png" alt="Go Home" />
+                <img src="media/img/mActionQgisHomePage.png" alt="Go Home" />
             </button>
             <button onclick="gp.ToogleLegend()" onmouseover="gp.TipOn('Toogle Legend from map','tool');"
                     onmouseout="gp.TipOff()" class="tool">
-                <img src="img/mActionAddLegend.png" alt="Legend" />
+                <img src="media/img/mActionAddLegend.png" alt="Legend" />
             </button>
-            <img src="img/separator.png" />
+            <img src="media/img/separator.png" />
             <button onclick="gp.ZoomFullExtent()" onmouseover="gp.TipOn('Get Full Extent','tool');"
                     onmouseout="gp.TipOff()" class="tool">
-                <img src="img/mActionZoomFullExtent.png" alt="Zoom Full Extent" />
+                <img src="media/img/mActionZoomFullExtent.png" alt="Zoom Full Extent" />
             </button>
             <button onclick="gp.ZoomIn()" onmouseover="gp.TipOn('Zoom In Tool','tool');"
                     onmouseout="gp.TipOff()" class="tool">
-                <img src="img/mActionZoomIn.png" alt="Zoom In" />
+                <img src="media/img/mActionZoomIn.png" alt="Zoom In" />
             </button>
             <button onclick="gp.ZoomOut()" onmouseover="gp.TipOn('Zoom Out Tool','tool');"
                     onmouseout="gp.TipOff()" class="tool">
-                <img src="img/mActionZoomOut.png" alt="Zoom Out" />
+                <img src="media/img/mActionZoomOut.png" alt="Zoom Out" />
             </button>
             <button onclick="gp.Pan()" onmouseover="gp.TipOn('Pan Tool','tool');"
                     onmouseout="gp.TipOff()" class="tool">
-                <img src="img/mActionPan.png" alt="Pan" />
+                <img src="media/img/mActionPan.png" alt="Pan" />
             </button>
-            <img src="img/separator.png" />
+            <img src="media/img/separator.png" />
             <button onclick="gp.ShowAllLayers()" onmouseover="gp.TipOn('Show All Layers','tool');"
                     onmouseout="gp.TipOff()" class="tool">
-                <img src="img/mActionShowAllLayers.png" alt="show all" />
+                <img src="media/img/mActionShowAllLayers.png" alt="show all" />
             </button>
             <button onclick="gp.HideAllLayers()" onmouseover="gp.TipOn('Hide All Layers','tool');"
                     onmouseout="gp.TipOff()" class="tool">
-                <img src="img/mActionHideAllLayers.png" alt="show all" />
+                <img src="media/img/mActionHideAllLayers.png" alt="show all" />
             </button>
-            <img src="img/separator.png" />
+            <img src="media/img/separator.png" />
             <button onclick="gp.Identify()" onmouseover="gp.TipOn('Identify Tool','tool');"
                     onmouseout="gp.TipOff()" class="tool">
-                <img src="img/mActionIdentify.png" alt="Identify" />
+                <img src="media/img/mActionIdentify.png" alt="Identify" />
             </button>
             <select id="geoBookmarks" class="tool" onchange="gp.ChangeExtentgeoBookmark();">
                 <option value="">Select a geoBookmark</option>

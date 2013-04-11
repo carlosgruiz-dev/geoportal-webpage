@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link type="text/css" rel="stylesheet" href="media/css/bootstrap.css">
+    <link type="text/css" rel="stylesheet" 
+      href="media/css/bootstrap-responsive.css">
+
+    <style type="text/css"> img { max-width:none; } </style>
+   <title>geoportal</title>
+  </head>
+  <body>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" 
+            data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">Geoportal</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li><a href="#mapview" title="View Map"><i class="icon-home icon-white"></i></a></li>
+              <ul class="nav">
+                <li>
+                  <div class="btn-group" data-toggle="buttons-radio">
+                    <button class="btn" title="Zoom to Max Extent"><i class="icon-globe"></i></button>
+                    <button class="btn" title="Zoom In"><i class="icon-zoom-in"></i></button>
+                    <button class="btn" title="Zoom Out"><i class="icon-zoom-out"></i></button>
+                    <button class="btn" title="Pan"><i class="icon-hand-up"></i></button>
+                    <button class="btn" title="Information Tool"><i class="icon-info-sign"></i></button>
+                    <button class="btn" title="Measure Tool"><i class="icon-resize-full"></i></button>
+                  </div>
+                </li>
+
+
+              </ul>
+
+              <li>
+                <form class="navbar-search pull-left">
+                  <input type="text" class="search-query" placeholder="Search">
+                </form>
+              </li>
+            </ul>
+            <ul class="nav pull-right">
+
+<!-- Layers -->
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" title="Layers"
+                  data-toggle="dropdown"><i class="icon-list icon-white"></i><b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a> <label class="checkbox"><input type="checkbox">
+                    Layer 1</input></label></a>
+                  </li>
+                  <li><a> <label class="checkbox"><input type="checkbox">
+                    Layer 2</input></label></a>
+                  </li>
+                  <li><a> <label class="checkbox"><input type="checkbox">
+                    Layer 3</input></label></a>
+                  </li>
+                  <li><a> <label class="checkbox"><input type="checkbox">
+                    Layer 4</input></label></a>
+                  </li>
+                  <li><a> <label class="checkbox"><input type="checkbox">
+                    Layer 5</input></label></a>
+                  </li>
+                  <li><a> <label class="checkbox"><input type="checkbox">
+                    Layer 6</input></label></a>
+                  </li>
+                  <li><a> <label class="checkbox"><input type="checkbox">
+                    Layer 7</input></label></a>
+                  </li>
+                  <li class="divider"></li>
+                  <li><a href="#"><i class="icon-eye-open"></i> toggle on all layers</a></li>
+                  <li><a href="#"><i class="icon-eye-close"></i> toggle off all layers</a></li>
+                </ul>
+              </li>
+<!-- end Layers -->
+
+<!-- Geobookmarks -->
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" title="Geobookmarks"
+                  href="#"><i class="icon-bookmark icon-white"></i><b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Zoom 1</a></li>
+                  <li><a href="#">Zoom 2</a></li>
+                  <li><a href="#">Zoom 3</a></li>
+                  <li><a href="#">Zoom 4</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#"><i class="icon-globe"></i> Zoom to MaxExtent</a></li>
+                </ul>
+              </li>
+<!-- end Geobookmarks -->
+
+<!-- Help -->
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" title="Help"
+                href="#"><i class="icon-book icon-white"></i><b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#onlinehelp">OnLine Help</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#about">About geoportal</a></li>
+                </ul>
+              </li>
+<!-- end Help -->
+
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+    <section id="mapview">
+      <div class="container">
+        <div id="map" style="margin: auto;margin-top: 58px;border: 1px solid #ccc;height: 500px;background: #7ca8bf"></div>
+      </div>
+    </section>
+    <section id="onlinehelp">
+      <div class="container">
+     
+        <h1 style="margin-top: 58px;">Help</h1>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc elementum arcu a nisl tristique viverra varius eros viverra. Curabitur sagittis malesuada nisl, quis volutpat risus blandit et. Maecenas diam quam, consequat ut cursus a, rhoncus in orci. Pellentesque eget nibh non ante faucibus luctus. Morbi lorem lacus, interdum venenatis dignissim a, luctus id leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed scelerisque dapibus sodales. Curabitur nec luctus purus. Nunc diam magna, imperdiet eget commodo convallis, commodo at risus. Cras id lacus id magna molestie pellentesque. Suspendisse ante tortor, scelerisque ac consectetur ut, iaculis eu ante.</p>
+
+        <p>Donec tempor consequat elit, non condimentum tellus ultricies at. Vivamus ut lorem dui, ac condimentum felis. Mauris ac metus a nisi aliquam sodales. Etiam rhoncus, ante at venenatis auctor, metus diam rutrum lorem, ultrices bibendum quam lectus a dolor. Mauris pretium fermentum ligula, et ullamcorper mi tempus volutpat. Sed ornare augue hendrerit urna pulvinar vel hendrerit velit volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc ac eros id nibh elementum porttitor. Quisque in orci luctus felis congue scelerisque. Integer dictum varius leo, non fermentum risus dictum in.</p>
+
+        <p>Aenean cursus diam quis nisl mollis sed vulputate enim interdum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec convallis sem et diam fermentum sit amet porttitor quam ornare. Quisque justo nibh, accumsan ac mattis vitae, dignissim vel felis. Vivamus vel lectus vitae mi rutrum elementum. Suspendisse dolor sem, venenatis non vestibulum eget, tincidunt a enim. Maecenas rhoncus ornare nisl eget molestie.</p>
+
+         <p>Pellentesque consectetur aliquet pulvinar. Pellentesque tincidunt eros vel dui dapibus sagittis. Suspendisse nec faucibus magna. Suspendisse potenti. Sed euismod metus vel arcu lobortis vitae congue ante hendrerit. Integer ligula mauris, pulvinar tincidunt tristique vitae, mattis quis diam. Donec libero diam, ornare vel vestibulum nec, rutrum ac mi. Integer vehicula mattis nunc, eget vehicula erat vehicula a. Proin eu metus diam.</p>
+
+        <p>Curabitur lacus tellus, ultrices vitae lobortis nec, ultricies vel tellus. Mauris luctus consequat felis quis sagittis. Nam interdum consequat purus, eget blandit lorem suscipit quis. Aliquam pretium blandit vulputate. Aenean porta justo at quam ultrices eu semper felis venenatis. Curabitur porta est eu mi vulputate consequat placerat nibh porta. Morbi blandit massa eu neque iaculis posuere. Etiam dictum sagittis viverra. Praesent vitae enim dui, interdum commodo velit. Nam tincidunt viverra volutpat.</p>
+
+      </div>  
+    </section>
+    <section id="about">
+      <div class="container">
+
+        <h1 style="margin-top: 58px;">About</h1>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc elementum arcu a nisl tristique viverra varius eros viverra. Curabitur sagittis malesuada nisl, quis volutpat risus blandit et. Maecenas diam quam, consequat ut cursus a, rhoncus in orci. Pellentesque eget nibh non ante faucibus luctus. Morbi lorem lacus, interdum venenatis dignissim a, luctus id leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed scelerisque dapibus sodales. Curabitur nec luctus purus. Nunc diam magna, imperdiet eget commodo convallis, commodo at risus. Cras id lacus id magna molestie pellentesque. Suspendisse ante tortor, scelerisque ac consectetur ut, iaculis eu ante.</p>
+
+        <p>Donec tempor consequat elit, non condimentum tellus ultricies at. Vivamus ut lorem dui, ac condimentum felis. Mauris ac metus a nisi aliquam sodales. Etiam rhoncus, ante at venenatis auctor, metus diam rutrum lorem, ultrices bibendum quam lectus a dolor. Mauris pretium fermentum ligula, et ullamcorper mi tempus volutpat. Sed ornare augue hendrerit urna pulvinar vel hendrerit velit volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc ac eros id nibh elementum porttitor. Quisque in orci luctus felis congue scelerisque. Integer dictum varius leo, non fermentum risus dictum in.</p>
+
+        <p>Aenean cursus diam quis nisl mollis sed vulputate enim interdum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec convallis sem et diam fermentum sit amet porttitor quam ornare. Quisque justo nibh, accumsan ac mattis vitae, dignissim vel felis. Vivamus vel lectus vitae mi rutrum elementum. Suspendisse dolor sem, venenatis non vestibulum eget, tincidunt a enim. Maecenas rhoncus ornare nisl eget molestie.</p>
+
+        <p>Pellentesque consectetur aliquet pulvinar. Pellentesque tincidunt eros vel dui dapibus sagittis. Suspendisse nec faucibus magna. Suspendisse potenti. Sed euismod metus vel arcu lobortis vitae congue ante hendrerit. Integer ligula mauris, pulvinar tincidunt tristique vitae, mattis quis diam. Donec libero diam, ornare vel vestibulum nec, rutrum ac mi. Integer vehicula mattis nunc, eget vehicula erat vehicula a. Proin eu metus diam.</p>
+
+        <p>Curabitur lacus tellus, ultrices vitae lobortis nec, ultricies vel tellus. Mauris luctus consequat felis quis sagittis. Nam interdum consequat purus, eget blandit lorem suscipit quis. Aliquam pretium blandit vulputate. Aenean porta justo at quam ultrices eu semper felis venenatis. Curabitur porta est eu mi vulputate consequat placerat nibh porta. Morbi blandit massa eu neque iaculis posuere. Etiam dictum sagittis viverra. Praesent vitae enim dui, interdum commodo velit. Nam tincidunt viverra volutpat.</p>
+        </div>
+        <hr style="margin-top: 60px;"/>
+      </section>
+
+    <script type="text/javascript" src="media/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="media/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="media/js/OpenLayers.js"></script>
+    <!-- <script type="text/javascript" src="media/js/geoportal.js"></script> -->
+    <script type="text/javascript">
+var map = new OpenLayers.Map({
+
+          div: "map",
+
+          theme: null,
+
+          controls: [
+
+              new OpenLayers.Control.Attribution(),
+
+              new OpenLayers.Control.TouchNavigation({
+
+                  dragPanOptions: {
+
+                      enableKinetic: true
+
+                  }
+
+              }),
+
+              new OpenLayers.Control.Zoom()
+
+          ],
+
+          layers: [
+
+              new OpenLayers.Layer.OSM("OpenStreetMap", null, {
+
+                  transitionEffect: "resize",
+
+                  attribution: "&copy; <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"
+
+              })
+
+          ],
+
+          center: new OpenLayers.LonLat(0, 0),
+
+          zoom: 1
+
+      });
+    </script>
+  </body>
+</html>
