@@ -1,0 +1,4 @@
+point	title	description	icon
+10.47473,-66.90344	Caracas	Capital de Venezuela	http://www.openlayers.org/dev/img/marker.png
+10.22205,-67.57910	Maracay	Capital del Estado Aragua	http://www.openlayers.org/dev/img/marker-blue.png
+10.17261,-67.93616	Valencia	Capital del Estado Carabobo	http://www.openlayers.org/dev/img/marker-green.png

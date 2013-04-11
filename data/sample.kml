@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Sample</name>
+    <Placemark>
+      <name>Ciudad: Caracas</name>
+      <description>
+      <![CDATA[
+      <p>Prueba</p>
+      <img src="http://www.derechos.org.ve/proveaweb/wp-content/uploads/caracas.jpg" height="240" width="320" />
+      ]]>
+      </description>
+      <Point>
+        <coordinates>-66.90344,10.47473</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Ciudad: San Cristobal</name>
+      <description>
+      <![CDATA[
+      <p>Prueba</p>
+      <a href="http://es.wikipedia.org/wiki/San_Crist%C3%B3bal_(Venezuela)">link</a>
+      ]]>
+      </description>
+      <Point>
+        <coordinates>-72.22357,7.77484</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Ciudad: Mérida</name>
+      <description>
+      <![CDATA[
+      <p>Prueba<p>
+      <a href="http://190.2.41.9/home/homeG.dot">Gobierno en Línea</a>
+      ]]>
+      </description>
+      <Point>
+        <coordinates>-71.16339,8.57684</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Ciudad: Barquisimeto</name>
+      <description>
+      <![CDATA[
+      <p>Prueba</p>
+      <a href="http://190.2.41.9/home/geografia4.dot">Gobierno en Línea (geografía)</a>
+      ]]>
+      </description>
+      <Point>
+        <coordinates>-69.33966,10.07648</coordinates>
+      </Point>
+    </Placemark>
+        <Placemark>
+      <name>Ciudad: Maracaibo</name>
+      <description>
+      <![CDATA[
+      <iframe title="YouTube video player" class="youtube-player" type="text/html" width="480" height="390" src="http://www.youtube.com/embed/F4ES9Lqq2hA" frameborder="0"></iframe>
+      ]]>
+      </description>
+      <Point>
+        <coordinates>-71.66327,10.64777</coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>

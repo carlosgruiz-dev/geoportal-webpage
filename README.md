@@ -1,4 +1,5 @@
-geoportal-webpage
-=================
+#Geoportal
 
-Web mapping made easy
+Web Mapping made easy
+
+This is an HTML/CSS/JavaScript made portal for web mapping.

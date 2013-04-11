@@ -1,0 +1,98 @@
+body {
+    margin: 0px;
+}
+
+h1 {
+    font-family: Arial,Verdana,Helvica;
+    font-size: 24px;
+}
+
+h2 {
+    font-family: Arial,Verdana,Helvica;
+    font-size: 20px;
+    border-bottom: 1px solid #AAA;
+}
+
+.head {
+    position:fixed;
+    top: 0px;
+    height: 38px;
+    width: 100%;
+    margin: 0px;
+    vertical-align: top;
+    text-align: left;
+    font-family: Arial,Verdana,Helvica;
+    font-size:24px;
+    border-bottom: 1px solid #6B6B6B;
+}
+
+.toolbar {
+    position:fixed;
+    top: 40px;
+    width: 100%;
+    /* background-color: #F9F9F9; */
+    margin:0px;
+    vertical-align: middle;
+}
+
+button.tool {
+    margin: 0px;
+    vertical-align: top;
+}
+
+label.active-tool {
+    position:fixed;
+    right: 5px;
+    top: 41px;
+    vertical-align:middle;
+    font-family: Arial,Verdana,Helvica;
+    font-size: 14px;
+}
+
+.legend {
+    position: fixed;
+    top:72px;
+    bottom:14px;
+    border-top: 1px solid #6B6B6B;
+    overflow:auto;
+}
+
+.map {
+    position: fixed;
+    top:72px;
+    right: 0px;
+    bottom:15px;
+    /*width: 100%;*/
+    width:100px;
+    height:100px;
+    border-top: 1px solid #6B6B6B;
+    border-left: 1px solid #6B6B6B;
+}
+
+.footer {
+    position:fixed;
+    bottom:0px;
+    border-top: 1px solid #6B6B6B;
+    height:14px;
+    width:100%;
+    text-align: center;
+    font-family: Arial,Verdana,Helvica;
+    font-size: 10px;
+    background-color: #ffffff;
+}
+
+.status-label {
+    position: fixed;
+    bottom:0px;
+    right:0px;
+    background-color: #F9E690;
+    color: #000;
+    font-family: Arial,Verdana,Helvica;
+    font-size:12px;
+}
+
+.leyend-element {
+    margin: 2px;
+    border: 1px dotted #6B6B6B;
+    font: 12px Arial,Helvica,Verdana normal;
+}
