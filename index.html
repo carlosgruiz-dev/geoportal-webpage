@@ -108,7 +108,7 @@
               <ul class="dropdown-menu">
                 <li><a href="#">OnLine Help</a></li>
                 <li class="divider"></li>
-                <li><a href="#">About Geoportal</a></li>
+                <li><a href="https://github.com/atmantree/geoportal-webpage/wiki" target="_blank">About Geoportal</a></li>
               </ul>
             </li>
           </ul>
@@ -117,13 +117,8 @@
 
 	  
       <!-- Main component for a primary marketing message or call to action -->
-      <div class="jumbotron">
-        <h1>Navbar example</h1>
-        <p>This example is a quick exercise to illustrate how the default, static navbar and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
-        <p>
-          <a class="btn btn-lg btn-primary" href="../../components/#navbar">View navbar docs &raquo;</a>
-        </p>
-      </div>
+      <div id="map" class="col-lg-12" style="height: 600px"></div>
+
     </div> <!-- /container -->
 
 
@@ -132,5 +127,30 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/OpenLayers.js"></script>
+
+    <script type="text/javascript">
+      var map = new OpenLayers.Map({
+          div: "map",
+          theme: null,
+          controls: [
+              new OpenLayers.Control.Attribution(),
+              new OpenLayers.Control.TouchNavigation({
+                  dragPanOptions: {
+                      enableKinetic: true
+                  }
+              }),
+              new OpenLayers.Control.Zoom()
+          ],
+          layers: [
+              new OpenLayers.Layer.OSM("OpenStreetMap", null, {
+                  transitionEffect: "resize",
+                  attribution: "&copy; <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"
+              })
+          ],
+          center: new OpenLayers.LonLat(0, 0),
+          zoom: 1
+      });
+  </script>
   </body>
 </html>
