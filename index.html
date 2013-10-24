@@ -128,29 +128,12 @@
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/OpenLayers.js"></script>
+    <script src="js/Geoportal.conf.js"></script>
+    <script src="js/Geoportal.js"></script>
+   
 
     <script type="text/javascript">
-      var map = new OpenLayers.Map({
-          div: "map",
-          theme: null,
-          controls: [
-              new OpenLayers.Control.Attribution(),
-              new OpenLayers.Control.TouchNavigation({
-                  dragPanOptions: {
-                      enableKinetic: true
-                  }
-              }),
-              new OpenLayers.Control.Zoom()
-          ],
-          layers: [
-              new OpenLayers.Layer.OSM("OpenStreetMap", null, {
-                  transitionEffect: "resize",
-                  attribution: "&copy; <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"
-              })
-          ],
-          center: new OpenLayers.LonLat(0, 0),
-          zoom: 1
-      });
-  </script>
+       Geoportal.Init();
+    </script>
   </body>
 </html>
