@@ -4,10 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href="http://atmantree.com/favicon.ico">
-
-    <title>Geoportal</title>
+    <meta name="author" content="Carlos Gustavo Ruiz (arahat)">
+    <link rel="shortcut icon" href="img/favicon.ico">
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -91,16 +89,7 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle glyphicon glyphicon-bookmark" title="Spatial Bookmark" 
 						data-toggle="dropdown"><b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Zoom # 1</a></li>
-				<li><a href="#">Zoom # 2</a></li>
-				<li><a href="#">Zoom # 3</a></li>
-				<li><a href="#">Zoom # 4</a></li>
-				<li><a href="#">Zoom # 5</a></li>
-				<li><a href="#">Zoom # 6</a></li>
-				<li><a href="#">Zoom # 7</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Zoom to Max Extent</a></li>
+              <ul id="geoportal-bookmarks" class="dropdown-menu">
               </ul>
             </li>
             <li class="dropdown">
@@ -128,7 +117,6 @@
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/OpenLayers.js"></script>
-    <script src="js/Geoportal.conf.js"></script>
     <script src="js/Geoportal.js"></script>
    
 
