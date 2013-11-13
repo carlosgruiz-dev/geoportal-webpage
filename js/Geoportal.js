@@ -66,14 +66,23 @@ Geoportal.Init = function () {
  */
 Geoportal.Map.Layers = [];
 Geoportal.Map.ZoomToMaxExtent = function() {
-    alert("TODO");
+    alert("TODO: Geoportal.Map.ZoomToMaxExtent");
 };
+
 Geoportal.Map.ZoomToBookmark = function(lon,lat,zoom) {
-    alert("TODO");
+    alert("TODO: Geoportal.Map.ZoomToBookmark");
 };
 
 Geoportal.Map.Fill = function() {
-    alert("TODO");
+    alert("TODO: Geoportal.Map.Fill");
+};
+
+document.getElementById("toogle-all-layers-on").onclick = function() {
+    alert("TODO: Geoportal.Map.ToogleAllLayersOn");
+};
+
+document.getElementById("toogle-all-layers-off").onclick = function() {
+    alert("TODO: Geoportal.Map,ToogleAllLayersOff");
 };
 
 /*
