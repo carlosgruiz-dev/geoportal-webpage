@@ -9,16 +9,20 @@
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
-
+    <link href="css/leaflet.css" rel="stylesheet">
     <!-- Custom styles for this template 
     <link href="navbar.css" rel="stylesheet">-->
 	<style>
-	body {
-		padding: 30px;
+	html, body, #geoportal {
+	    height:100%;
+	    width:100%;
+	    padding:0px;
+	    margin:0px;
 	}
 
 	.navbar {
-		margin-bottom: 30px;
+	    margin-top: 10px;
+	    margin-bottom: 30px;
 	}
 	</style>
 
@@ -29,7 +33,7 @@
     <![endif]-->
   </head>
 
-  <body>
+  <body id="geoportal">
 
     <div class="container">
 
@@ -105,18 +109,17 @@
       </div>
 
 	  
-      <!-- Main component for a primary marketing message or call to action -->
-      <div id="map" class="col-lg-12" style="height: 600px"></div>
+      <!-- Main component for a primary marketing message or call to action 
+      <div id="map" class="col-lg-12" style="height: 600px"></div> -->
 
     </div> <!-- /container -->
-
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/OpenLayers.js"></script>
+    <script src="js/leaflet.js"></script>
     <script src="js/Geoportal.js"></script>
    
 

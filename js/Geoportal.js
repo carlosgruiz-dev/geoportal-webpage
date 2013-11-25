@@ -37,27 +37,13 @@ Geoportal.Init = function () {
     // Fill Menus
     Geoportal.Bookmarks.Fill();
     // Display Map
-    var map = new OpenLayers.Map({
-          div: "map",
-          theme: null,
-          controls: [
-              new OpenLayers.Control.Attribution(),
-              new OpenLayers.Control.TouchNavigation({
-                  dragPanOptions: {
-                      enableKinetic: true
-                  }
-              }),
-              new OpenLayers.Control.Zoom()
-          ],
-          layers: [
-              new OpenLayers.Layer.OSM("OpenStreetMap", null, {
-                  transitionEffect: "resize",
-                  attribution: "&copy; <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"
-              })
-          ],
-          center: new OpenLayers.LonLat(0, 0),
-          zoom: 1
-      });
+    
+    var map = L.map('geoportal').setView([10.49288, -66.87618],13);
+    L.tileLayer('http://{s}.tile.cloudmade.com/d4fc77ea4a63471cab2423e66626cbb6/997/256/{z}/{x}/{y}.png', { 
+        attribution: 'Geoportal &copy; 2013',
+        maxZoom: 18
+    }).addTo(map);
+
 };
 
 
@@ -84,6 +70,63 @@ document.getElementById("toogle-all-layers-on").onclick = function() {
 document.getElementById("toogle-all-layers-off").onclick = function() {
     alert("TODO: Geoportal.Map,ToogleAllLayersOff");
 };
+
+
+/*
+ * Geoportal.Controls Control List
+ */ 
+
+Geoportal.Controls = {};
+
+/*
+ * Geoportal.Controls.ZoomIn Control
+ */ 
+
+Geoportal.Controls.ZoomIn = {};
+
+Geoportal.Controls.ZoomIn.activated = false;
+
+Geoportal.Controls.ZoomIn.Activate = function (status) {
+    alert("TODO: Geoportal.Controls.ZoomIn.Activate");
+}
+
+Geoportal.Controls.ZoomIn.Action = function (rectangle) {
+    alert("TODO: Geoportal.Controls.ZoomOut.Action");
+}
+
+/*
+ * Geoportal.Controls.ZoomOut Control
+ */ 
+
+
+Geoportal.Controls.ZoomOut = {};
+
+Geoportal.Controls.ZoomOut.activated = false;
+Geoportal.Controls.ZoomOut.factor = 3;
+
+Geoportal.Controls.ZoomOut.Activate = function (status) {
+    alert("TODO: Geoportal.Controls.ZoomOut.Activate");
+}
+
+Geoportal.Controls.ZoomOut.Action = function(point) {
+    alert("TODO: Geoportal.Controls.ZoomOut.Action");
+}
+
+/*
+ * Geoportal.Controls.Move Control
+ */
+
+Geoportal.Controls.Move = {};
+
+Geoportal.Controls.Move.activated = false;
+
+Geoportal.Controls.Move.Activate = function (status) {
+
+}
+
+Geoportal.Controls.Move.Action = function(initial_point, final_point) {
+
+}
 
 /*
  * Geoportal.Bookmarks Functions
