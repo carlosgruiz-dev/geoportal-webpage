@@ -2,7 +2,21 @@
  * License goes here
  */
 
-Geoportal.Page.Title = "Geoportal 2.0";
+
+
+
+/*
+ * Geoportal Options
+ *
+ * Usage: uncomment and fill the following values in order to customize your map.
+ *     
+ */
+
+// G.Page.Title = "Geoportal 2.0";
+// G.Page.brand = "Geoportal";
+// G.Map.center = [7.88515, -65.56641];
+// G.Map.zoom = 6;
+// G.Map.scale = true;
 
 
 /* 
@@ -13,7 +27,7 @@ Geoportal.Page.Title = "Geoportal 2.0";
  *
  */
 
-Geoportal.Bookmarks.List = [
+G.Bookmarks.List = [
    {
        "name" : "My Bookmark",
        "lon"  : -66,
@@ -28,9 +42,9 @@ Geoportal.Bookmarks.List = [
  *
  * Usage: ...
  *
- */
+ *
 
-Geoportal.Map.Layers = [
+G.Layers.List = [
    {
        "name" : "New WMS Layer",
        "source" : "WMS",
@@ -49,4 +63,4 @@ Geoportal.Map.Layers = [
        "name" : "New OSM Layer",
        "source" : "OSM"
    }
-]
+]; */

@@ -45,7 +45,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Geoportal</a>
+          <a class="navbar-brand" id="brand" href="#">Geoportal</a>
         </div>
         <div class="navbar-collapse collapse">
 			<div class="btn-group navbar-form navbar-left" data-toggle="buttons">
@@ -77,17 +77,7 @@
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
               <a href="#" class="dropdown-toggle glyphicon glyphicon-list" title="Layers" data-toggle="dropdown"><b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="#"><input type="checkbox"> Layer # 1</input></a></li>
-		<li><a href="#"><input type="checkbox"> Layer # 2</input></a></li>
-		<li><a href="#"><input type="checkbox"> Layer # 3</input></a></li>
-		<li><a href="#"><input type="checkbox"> Layer # 4</input></a></li>
-		<li><a href="#"><input type="checkbox"> Layer # 5</input></a></li>
-		<li><a href="#"><input type="checkbox"> Layer # 6</input></a></li>
-		<li><a href="#"><input type="checkbox"> Layer # 7</input></a></li>
-                <li class="divider"></li>
-                <li><a href="#" id="toogle-all-layers-on"> toggle all layers on</a></li>
-                <li><a href="#" id="toogle-all-layers-off"> toggle all layers off</a></li>
+              <ul id="geoportal-layers"class="dropdown-menu">
               </ul>
             </li>
             <li class="dropdown">
@@ -99,7 +89,7 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle glyphicon glyphicon-book" title="Help" data-toggle="dropdown"><b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="#">OnLine Help</a></li>
+                <li><a href="#">Help</a></li>
                 <li class="divider"></li>
                 <li><a href="https://github.com/atmantree/geoportal-webpage/wiki" target="_blank">About Geoportal</a></li>
               </ul>
@@ -124,7 +114,7 @@
    
 
     <script type="text/javascript">
-       Geoportal.Init();
+       G.Init();
     </script>
   </body>
 </html>

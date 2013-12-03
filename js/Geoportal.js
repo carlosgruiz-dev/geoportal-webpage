@@ -8,16 +8,17 @@
 /**
  * Geoportal Objects Initialization
  */
-var Geoportal = {};
-Geoportal.Page = {};
-Geoportal.Map = {};
-Geoportal.Controls = {};
-Geoportal.Bookmarks = {};
+var G = {};
+G.Page = {};
+G.Map = {};
+G.Layers = {};
+G.Controls = {};
+G.Bookmarks = {};
     
 /**
  * Constant: VERSION_NUMBER
  */
-Geoportal.VERSION_NUMBER="2.0a";
+G.VERSION_NUMBER="2.0a";
 
 
 
@@ -25,123 +26,131 @@ Geoportal.VERSION_NUMBER="2.0a";
 
 
 /**
- * Function: Geoportal.Init
+ * Function: G.Init
  * Starts Geoportal in the index page
  */
-Geoportal.Init = function () {
+G.Init = function () {
 
-    // Set Page Data
-    Geoportal.Page.Title = Geoportal.Page.Title || "Geoportal - " + Geoportal.VERSION_NUMBER;
-    document.title = Geoportal.Page.Title;
+    // Check values or set default values
+    document.title = G.Page.Title || "Geoportal - " + G.VERSION_NUMBER;
+    document.getElementById("brand").innerHTML = G.Page.brand || "Geoportal";
+    G.Map.zoom = G.Map.zoom || 6;
+    G.Map.center = G.Map.center || [7.88515, -65.56641];
+    G.Map.scale = G.Map.scale || true;
+    G.Layers.List = G.Layers.List || [{ name: "OpenStreetMap", layer: "OSM" }];
+
+   
+
 
     // Fill Menus
-    Geoportal.Bookmarks.Fill();
+    G.Layers.FillMenu();
+    G.Bookmarks.Fill();
     // Display Map
     
-    var map = L.map('geoportal').setView([10.49288, -66.87618],13);
-    L.tileLayer('http://{s}.tile.cloudmade.com/d4fc77ea4a63471cab2423e66626cbb6/997/256/{z}/{x}/{y}.png', { 
-        attribution: 'Geoportal &copy; 2013',
-        maxZoom: 18
-    }).addTo(map);
+    G.Map.map = L.map('geoportal', {
+           center : G.Map.center,
+	   zoom : G.Map.zoom,
+           keyboard : true,
+	   zoomControl : false
+	   });
+    G.Map.map.attributionControl.setPrefix("<a href=\"https://github.com/atmantree/geoportal-webpage/\" target=\"_blank\">Geoportal</a>");
+    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(G.Map.map);
+    if (G.Map.scale) { L.control.scale().addTo(G.Map.map); }
+    //L.tileLayer('http://{s}.tile.cloudmade.com/d4fc77ea4a63471cab2423e66626cbb6/997/256/{z}/{x}/{y}.png').addTo(map);
 
 };
 
 
 /*
- * Geoportal.Map Functions
+ * G.Map Functions
  */
-Geoportal.Map.Layers = [];
-Geoportal.Map.ZoomToMaxExtent = function() {
-    alert("TODO: Geoportal.Map.ZoomToMaxExtent");
+G.Map.ZoomToMaxExtent = function(map) {
+    alert("TODO: G.Map.ZoomToMaxExtent");
+    
+
 };
 
-Geoportal.Map.ZoomToBookmark = function(lon,lat,zoom) {
-    alert("TODO: Geoportal.Map.ZoomToBookmark");
+G.Map.ZoomToBookmark = function(lon,lat,zoom) {
+    alert("TODO: G.Map.ZoomToBookmark");
 };
 
-Geoportal.Map.Fill = function() {
-    alert("TODO: Geoportal.Map.Fill");
+G.Map.Fill = function() {
+    alert("TODO: G.Map.Fill");
 };
 
-document.getElementById("toogle-all-layers-on").onclick = function() {
-    alert("TODO: Geoportal.Map.ToogleAllLayersOn");
+G.Map.ToogleAllLayersOn = function() {
+    alert("TODO: G.Map.ToogleAllLayersOn");
 };
 
-document.getElementById("toogle-all-layers-off").onclick = function() {
-    alert("TODO: Geoportal.Map,ToogleAllLayersOff");
+G.Map.ToogleAllLayersOff = function() {
+    alert("TODO: G.Map,ToogleAllLayersOff");
 };
 
 
 /*
- * Geoportal.Controls Control List
+ * G.Controls.ZoomIn Control
  */ 
 
-Geoportal.Controls = {};
+G.Controls.ZoomIn = {};
 
-/*
- * Geoportal.Controls.ZoomIn Control
- */ 
+G.Controls.ZoomIn.activated = false;
 
-Geoportal.Controls.ZoomIn = {};
-
-Geoportal.Controls.ZoomIn.activated = false;
-
-Geoportal.Controls.ZoomIn.Activate = function (status) {
-    alert("TODO: Geoportal.Controls.ZoomIn.Activate");
+G.Controls.ZoomIn.Activate = function (status) {
+    alert("TODO: G.Controls.ZoomIn.Activate");
 }
 
-Geoportal.Controls.ZoomIn.Action = function (rectangle) {
-    alert("TODO: Geoportal.Controls.ZoomOut.Action");
+G.Controls.ZoomIn.Action = function (rectangle) {
+    alert("TODO: G.Controls.ZoomOut.Action");
 }
 
 /*
- * Geoportal.Controls.ZoomOut Control
+ * G.Controls.ZoomOut Control
  */ 
 
 
-Geoportal.Controls.ZoomOut = {};
+G.Controls.ZoomOut = {};
 
-Geoportal.Controls.ZoomOut.activated = false;
-Geoportal.Controls.ZoomOut.factor = 3;
+G.Controls.ZoomOut.activated = false;
+G.Controls.ZoomOut.factor = 3;
 
-Geoportal.Controls.ZoomOut.Activate = function (status) {
-    alert("TODO: Geoportal.Controls.ZoomOut.Activate");
+G.Controls.ZoomOut.Activate = function (status) {
+    alert("TODO: G.Controls.ZoomOut.Activate");
 }
 
-Geoportal.Controls.ZoomOut.Action = function(point) {
-    alert("TODO: Geoportal.Controls.ZoomOut.Action");
-}
-
-/*
- * Geoportal.Controls.Move Control
- */
-
-Geoportal.Controls.Move = {};
-
-Geoportal.Controls.Move.activated = false;
-
-Geoportal.Controls.Move.Activate = function (status) {
-
-}
-
-Geoportal.Controls.Move.Action = function(initial_point, final_point) {
-
+G.Controls.ZoomOut.Action = function(point) {
+    alert("TODO: G.Controls.ZoomOut.Action");
 }
 
 /*
- * Geoportal.Bookmarks Functions
+ * G.Controls.Move Control
  */
-Geoportal.Bookmarks.List = [];
 
-Geoportal.Bookmarks.Fill = function() {
+G.Controls.Move = {};
+
+G.Controls.Move.activated = false;
+
+G.Controls.Move.Activate = function (status) {
+
+}
+
+G.Controls.Move.Action = function(initial_point, final_point) {
+
+}
+
+/*
+ * G.Bookmarks Functions
+ */
+G.Bookmarks.List = [];
+
+G.Bookmarks.Fill = function() {
     gb = document.getElementById("geoportal-bookmarks");
-    for (bm in Geoportal.Bookmarks.List){
+    for (bm in G.Bookmarks.List){
         var li = document.createElement("li");
-	li.innerHTML = "<a href=\"#\" onclick=\"Geoportal.Map.ZoomToBookmark(" +
-		       Geoportal.Bookmarks.List[bm].lon + "," +
-		       Geoportal.Bookmarks.List[bm].lat + "," +
-		       Geoportal.Bookmarks.List[bm].zoom + ")\">" +
-		       Geoportal.Bookmarks.List[bm].name + "</a>";
+	li.innerHTML = "<a href=\"#\" onclick=\"G.Map.ZoomToBookmark(" +
+		       G.Bookmarks.List[bm].lon + "," +
+		       G.Bookmarks.List[bm].lat + "," +
+		       G.Bookmarks.List[bm].zoom + ")\">" +
+		       G.Bookmarks.List[bm].name + "</a>";
 	gb.appendChild(li);
     }
 
@@ -150,13 +159,52 @@ Geoportal.Bookmarks.Fill = function() {
     gb.appendChild(di);
     
     var last_li = document.createElement("li");
-    last_li.innerHTML = "<a href=\"#\" onclick=\"Geoportal.Map.ZoomToMaxExtent()\">Zoom to Max Extent</a>";
+    last_li.innerHTML = "<a href=\"#\" onclick=\"G.Map.ZoomToMaxExtent()\">Zoom to Max Extent</a>";
     gb.appendChild(last_li);
 };
 
+/*
+ * G.Layers Functions
+ */
 
 
+G.Layers.FillMenu = function() {
+    gl = document.getElementById("geoportal-layers");
+    
+    for (lyr in G.Layers.List.reverse()) {
+        var li = document.createElement("li");
+        li.setAttribute("onClick","G.Layers.Update(\"lyr-" + lyr + "\")");
+        li.innerHTML = "<a href=\"#\"><input type=\"checkbox\" id=\"lyr-" + lyr + "\"> " +
+        G.Layers.List.reverse()[lyr].name +"</input></a>";
+        gl.appendChild(li);
+    }
 
+    var s = document.createElement("li");
+    s.setAttribute("class","divider");
+    gl.appendChild(s);
+
+    var all_lyr_on = document.createElement("li");
+    all_lyr_on.innerHTML = "<a href=\"#\" id=\"toogle-all-layers-on\" " + 
+        "onClick=\"G.Map.ToogleAllLayersOn()\"> toggle all layers on</a>";
+    gl.appendChild(all_lyr_on);
+    
+    var all_lyr_off = document.createElement("li");
+    all_lyr_off.innerHTML = "<a href=\"#\" id=\"toogle-all-layers-off\" " + 
+        "onCLick=\"G.Map.ToogleAllLayersOff()\"> toggle all layers off</a>";
+    gl.appendChild(all_lyr_off);
+};
+
+G.Layers.FillMap = function() {
+    alert("TODO: G.Layers.FillMap");
+};
+
+G.Layers.Update = function(lyr) {
+    alert("TODO: G.Layers.Update (" + lyr + ")");
+};
+
+G.Layers.addOSMLayer = function () {
+    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(G.Map.map);
+}
 
 /**
  *  Load Geoportal.conf.js
@@ -166,10 +214,8 @@ function require(script) {
     $.ajax({
         url: script,
 	dataType: "script",
-	async: false,           // <-- This is the key
-	success: function () {
-	    // all good...
-	},
+	async: false, 
+	success: function () { },
 	error: function () {
 	throw new Error("Could not load script " + script);
 	}
