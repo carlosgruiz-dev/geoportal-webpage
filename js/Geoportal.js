@@ -37,7 +37,7 @@ G.Init = function () {
     G.Map.zoom = G.Map.zoom || 6;
     G.Map.center = G.Map.center || [7.88515, -65.56641];
     G.Map.scale = G.Map.scale || true;
-    G.Layers.List = G.Layers.List || [{ name: "OpenStreetMap", layer: "OSM" }];
+    G.Layers.List = G.Layers.List || [{ name: "OpenStreetMap", layer: "OSM", visible: true }];
 
    
 
@@ -65,13 +65,11 @@ G.Init = function () {
  * G.Map Functions
  */
 G.Map.ZoomToMaxExtent = function(map) {
-    alert("TODO: G.Map.ZoomToMaxExtent");
-    
-
+    G.Map.map.setView(L.latLng(G.Map.center[0],G.Map.center[1]), G.Map.zoom);
 };
 
 G.Map.ZoomToBookmark = function(lon,lat,zoom) {
-    alert("TODO: G.Map.ZoomToBookmark");
+    G.Map.map.setView(L.latLng(lat,lon), zoom, {pan:{animate: true,}, zoom:{animate:true}});
 };
 
 G.Map.Fill = function() {
@@ -174,8 +172,13 @@ G.Layers.FillMenu = function() {
     for (lyr in G.Layers.List.reverse()) {
         var li = document.createElement("li");
         li.setAttribute("onClick","G.Layers.Update(\"lyr-" + lyr + "\")");
-        li.innerHTML = "<a href=\"#\"><input type=\"checkbox\" id=\"lyr-" + lyr + "\"> " +
-        G.Layers.List.reverse()[lyr].name +"</input></a>";
+	if (G.Layers.List.reverse()[lyr].visible) {
+            li.innerHTML = "<a href=\"#\"><input type=\"checkbox\" checked=\"checked\" id=\"lyr-" + lyr + "\"> " +
+	      G.Layers.List.reverse()[lyr].name +"</input></a>";
+	} else {
+            li.innerHTML = "<a href=\"#\"><input type=\"checkbox\" id=\"lyr-" + lyr + "\"> " +
+              G.Layers.List.reverse()[lyr].name +"</input></a>"; 
+	}
         gl.appendChild(li);
     }
 
