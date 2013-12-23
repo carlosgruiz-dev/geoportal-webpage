@@ -68,7 +68,7 @@ G.Bookmarks.List = [
        "name" : "Barinas",
        "lon"  : -69.853492704079187,
        "lat"  : 8.151425330405127,
-       "zoom" : 9
+       "zoom" : 8
    },
    {
        "name" : "Bolívar",
@@ -134,7 +134,7 @@ G.Bookmarks.List = [
        "name" : "Nueva Esparta",
        "lon"  : -64.046396209409394,
        "lat"  : 10.987181552651439,
-       "zoom" : 10
+       "zoom" : 11
    },
    {
        "name" : "Portuguesa",
@@ -173,10 +173,10 @@ G.Bookmarks.List = [
        "zoom" : 8
    },
    {
-       "name" : "vargas",
+       "name" : "Vargas",
        "lon"  : -66.898020403956011,
        "lat"  : 10.546912778867114,
-       "zoom" : 11
+       "zoom" : 10
    }
 
 ];
