@@ -64,7 +64,7 @@ G.Init = function () {
 /*
  * G.Map Functions
  */
-G.Map.ZoomToMaxExtent = function(map) {
+G.Map.ZoomToMaxExtent = function() {
     G.Map.map.setView(L.latLng(G.Map.center[0],G.Map.center[1]), G.Map.zoom);
 };
 
@@ -84,6 +84,21 @@ G.Map.ToogleAllLayersOff = function() {
     alert("TODO: G.Map,ToogleAllLayersOff");
 };
 
+/*
+ * G.Controls.ZoomToMaxExtent Control
+ */
+
+G.Controls.ZoomToMaxExtent = {};
+
+G.Controls.ZoomToMaxExtent.activated = false;
+
+G.Controls.ZoomToMaxExtent.Activate = function () {
+    G.Controls.ZoomIn.Activate(false);
+    G.Controls.ZoomOut.Activate(false);
+    G.Controls.Move.Activate(false);
+    
+    G.Map.ZoomToMaxExtent();
+}
 
 /*
  * G.Controls.ZoomIn Control
@@ -94,11 +109,11 @@ G.Controls.ZoomIn = {};
 G.Controls.ZoomIn.activated = false;
 
 G.Controls.ZoomIn.Activate = function (status) {
-    alert("TODO: G.Controls.ZoomIn.Activate");
+    //alert("TODO: G.Controls.ZoomIn.Activate");
 }
 
 G.Controls.ZoomIn.Action = function (rectangle) {
-    alert("TODO: G.Controls.ZoomOut.Action");
+    //alert("TODO: G.Controls.ZoomOut.Action");
 }
 
 /*
@@ -112,11 +127,11 @@ G.Controls.ZoomOut.activated = false;
 G.Controls.ZoomOut.factor = 3;
 
 G.Controls.ZoomOut.Activate = function (status) {
-    alert("TODO: G.Controls.ZoomOut.Activate");
+    //alert("TODO: G.Controls.ZoomOut.Activate");
 }
 
 G.Controls.ZoomOut.Action = function(point) {
-    alert("TODO: G.Controls.ZoomOut.Action");
+    //alert("TODO: G.Controls.ZoomOut.Action");
 }
 
 /*
@@ -134,6 +149,41 @@ G.Controls.Move.Activate = function (status) {
 G.Controls.Move.Action = function(initial_point, final_point) {
 
 }
+
+
+/*
+ * G.Controls.Information Control
+ */
+
+G.Controls.Information = {};
+
+G.Controls.Information.activated = false;
+
+G.Controls.Information.Activate = function (status) {
+
+}
+
+G.Controls.Information.Action = function(point) {
+
+}
+
+/*
+ * G.Controls.Measure Control
+ */
+
+G.Controls.Measure = {};
+
+G.Controls.Measure.activated = false;
+
+G.Controls.Measure.Activate = function (status) {
+
+}
+
+G.Controls.Measure.Action = function(initial_point, final_point) {
+
+}
+
+
 
 /*
  * G.Bookmarks Functions
@@ -212,7 +262,8 @@ G.Layers.addOSMLayer = function () {
 /**
  *  Load Geoportal.conf.js
  */
-	
+
+	
 function require(script) {
     $.ajax({
         url: script,
